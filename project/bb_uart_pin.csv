@@ -1,7 +1,7 @@
  ispLEVER Classic 2.0.00.17.20.15 Fitter Report File 
 Project Name,bb_uart
 Project Path,C:\projects\ispMach-uart\project
-Project Fitted on,Sun Jul 22 16:26:34 2018
+Project Fitted on,Sun Jul 22 17:01:38 2018
 
 Pin,Pin_Type,Bank,GLB_Pad,Assigned,I/O_Type,Signal_Type,Signal_Name,PG
 1,GND,-,,,,,,
@@ -10,7 +10,7 @@ Pin,Pin_Type,Bank,GLB_Pad,Assigned,I/O_Type,Signal_Type,Signal_Name,PG
 4,I_O,0,C12,*,LVCMOS33,Output,osc_clk,
 5,I_O,0,C10,*,LVCMOS33,Output,tmr_clk,
 6,I_O,0,C8,*,LVCMOS33,Output,txbd_clk,
-7,I_O,0,C6,,,,,
+7,I_O,0,C6,*,LVCMOS33,Output,txd,
 8,I_O,0,C4,,,,,
 9,I_O,0,C2,,,,,
 10,GNDIO0,-,,,,,,

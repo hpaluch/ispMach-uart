@@ -2,16 +2,17 @@
 //
 // Top Level module
 //
-module bb_top(osc_clk, tmr_clk,txbd_clk, nled, nrst);
+module bb_top(osc_clk, tmr_clk,txbd_clk, nled, nrst, txd);
   output osc_clk;
   output tmr_clk;
   output [7:0]nled;
   output txbd_clk;
+  output txd;
 
   input nrst;
 
   assign nled[0] = nrst;         // LED D1 on when RESET active
-  assign nled[7:1] = 7'b1111111; // turn other LEDs off
+  assign nled[7:2] = 6'b111111; // turn other LEDs off
 
   // osc_clk should be 5 MHz
   // tmr_clk should osc_clk / 1048576 = ~4.768 Hz
@@ -24,6 +25,27 @@ module bb_top(osc_clk, tmr_clk,txbd_clk, nled, nrst);
   //assign txbd_clk = bd_cnt_out;
 
   bb_uart_clockbase cb1( .rst(rst), .clk(osc_clk), .bdout(txbd_clk) );
+
+  reg [11:0]counter;
+
+  wire   wtxbusy;
+  assign nled[1] = ~wtxbusy;
+
+  reg rtxen;
+
+  bb_uart_tx tx1( .rst(rst), .txen(rtxen), .txreg(8'h21), .bdclk(txbd_clk), .txd(txd), .txbsy(wtxbusy));
+
+  always @(posedge txbd_clk)
+  if (rst)
+  begin
+    counter <= 0;
+    rtxen <= 0;
+  end
+  else
+  begin
+    rtxen <= (counter == 5);
+    counter <= counter + 1;
+  end
 
 endmodule
 

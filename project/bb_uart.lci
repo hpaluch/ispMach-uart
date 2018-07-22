@@ -13,7 +13,7 @@ EN_PinMacrocell = yes;
 [Revision]
 Parent = lc4k256e.lci;
 DATE = 07/22/2018;
-TIME = 10:47:02;
+TIME = 17:01:14;
 Source_Format = Pure_Verilog_HDL;
 Synthesis = Synplify;
 
@@ -39,6 +39,7 @@ nled_7_ = Pin, 58, -, I, 2;
 osc_clk = Pin, 4, -, C, 12;
 tmr_clk = Pin, 5, -, C, 10;
 txbd_clk = Pin, 6, -, C, 8;
+txd = Pin, 7, -, C, 6;
 
 [Group Assignments]
 layer = OFF;
@@ -75,14 +76,15 @@ nled_7_ = LVCMOS33, PIN, 1, -;
 osc_clk = LVCMOS33, PIN, 0, -;
 tmr_clk = LVCMOS33, PIN, 0, -;
 txbd_clk = LVCMOS33, PIN, 0, -;
+txd = LVCMOS33, PIN, 0, -;
 
 [Pullup]
 OFF = nrst, nled_0_, nled_1_, nled_2_, nled_3_, nled_4_, nled_5_, nled_6_, nled_7_, 
-	osc_clk, tmr_clk, txbd_clk;
+	osc_clk, tmr_clk, txbd_clk, txd;
 
 [Slewrate]
 FAST = nled_0_, nled_1_, nled_3_, nled_4_, nled_5_, nled_6_, nled_7_, osc_clk, 
-	tmr_clk, txbd_clk;
+	tmr_clk, txbd_clk, txd;
 
 [Region]
 
@@ -160,4 +162,4 @@ layer = OFF;
 
 [OSCTIMER Assignments]
 layer = OFF;
-OSCTIMER = -, -, osc_clk_c, tmr_clk_c, 128;
+OSCTIMER = -, -, osc_clk_c, tmr_clk_c, 1048576;

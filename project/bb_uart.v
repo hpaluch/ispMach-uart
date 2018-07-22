@@ -17,8 +17,14 @@ module bb_uart_tx(rst, txen, txreg, bdclk, txd, txbsy);
   output txd;
   output txbsy;
 
-  reg [1:0]state;
-  reg [7:0]txreg2; // shift register for transfer
+  reg rtxbsy;
+  assign txbsy = rtxbsy;
+
+  reg rtxd;
+  assign txd = rtxd;
+
+  reg [1:0]rstate;
+  reg [7:0]rtxreg; // shift register for transfer
 
   parameter s0  = 4'b0000; // state 0 - idle
   parameter s1  = 4'b0001; // state 1 - transmit
@@ -31,37 +37,37 @@ module bb_uart_tx(rst, txen, txreg, bdclk, txd, txbsy);
   always @(posedge bdclk)
   if (rst)
   begin
-    state  <= s0; // async RESET
-    txbsy  <= 0;
-    txd    <= 1; // idle is 1 in RS232
+    rstate  <= s0; // async RESET
+    rtxbsy  <= 0;
+    rtxd    <= 1; // idle is 1 in RS232
   end
   else
   begin
-    if ( state == s0 && txen )
+    if ( rstate == s0 && txen )
     begin
-      state  <= s1; // transfer start bit
-      txreg2 <= txreg;
-      txbsy  <= 1;
-      txd    <= 1;
+      rstate  <= s1; // transfer start bit
+      rtxreg <= txreg;
+      rtxbsy  <= 1;
+      rtxd    <= 1;
     end
     else
-    if ( state >= s1 && state <= s8 )
+    if ( rstate >= s1 && rstate <= s8 )
     begin
-      state  <= state + 1;
-      txd    <= txreg2[0];
-      txreg2 <= { 1, txreg[7:1] };
+      rstate  <= rstate + 1;
+      rtxd    <= rtxreg[0];
+      rtxreg  <= { 1'b1, rtxreg[7:1] };
     end
     else 
-    if ( state == s9 )
+    if ( rstate == s9 )
     begin
-	txd   <= 1; // transfer stop bit
-        state <= s10;
-    end;
+	rtxd   <= 1; // transfer stop bit
+        rstate <= s10;
+    end
     else 
-    if ( state == s10 )
+    if ( rstate == s10 )
     begin
-        txbsy <= 0; // go to s0 - idle state
-	state <= s0;
+        rtxbsy <= 0; // go to s0 - idle state
+	rstate <= s0;
     end         
   end
 
