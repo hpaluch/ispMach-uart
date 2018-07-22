@@ -1,6 +1,6 @@
 // UART on ispMACH 4256ZE Breakout Board (bb)
 //
-// NOT YET TESTED!
+// Disclaimer: Seems to work (at least for me). But no warranty!
 //
 // TX - transmit data via UART from ispMACH to PC
 // Parameters:
