@@ -4,11 +4,23 @@ Example how to create UART in Verilog using:
 * [ispMACH 4256ZE Breakout Board][]
 * [USB Console Cable #954][] to transfer serial data from ispMach CPLD to PC
 
-> WARNING! Work in progress - UART not working yet....
+> WARNING! Work in progress - current status:
+>
+> 1. reached M1: TX (transmit to PC) is working - sending `!` each 0.5 seconds!
 
 ![ispMach as UART Schematics](https://github.com/hpaluch/ispMach-uart/blob/master/schematic/latt_uart.png?raw=true)
 
+NOTE: Serial port parameters (you can use Putty Serial connection) are following:
 
+* Baud rate: 9600
+* Start bit: `1`
+* Data bits: `8`
+* Stop bit: `1`
+* Parity: `none`
+* Flow control: `none` 
+
+Please see my [PIC UART demo project][] for more information
+on serial cable and especially driver tips.
 
 # Clock base verification
 
@@ -27,4 +39,7 @@ ispMach PIN|Verilog HDL name|Expected frequency|Measured frequency|Error
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
    "ispMACH 4256ZE Breakout Board"
-[USB Console Cable #954]: https://www.modmypi.com/raspberry-pi/communication-1068/serial-1075/usb-to-ttl-serial-cable-debug--console-cable-for-raspberry-pi "USB Console Cable #954" 
+[USB Console Cable #954]: https://www.modmypi.com/raspberry-pi/communication-1068/serial-1075/usb-to-ttl-serial-cable-debug--console-cable-for-raspberry-pi "USB Console Cable #954"
+[PIC UART demo project]: https://bitbucket.org/hpaluch/pic16f88-demo.x
+
+ 

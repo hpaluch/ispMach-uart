@@ -23,7 +23,7 @@ module bb_uart_tx(rst, txen, txreg, bdclk, txd, txbsy);
   reg rtxd;
   assign txd = rtxd;
 
-  reg [1:0]rstate;
+  reg [3:0]rstate;
   reg [7:0]rtxreg; // shift register for transfer
 
   parameter s0  = 4'b0000; // state 0 - idle
@@ -48,7 +48,7 @@ module bb_uart_tx(rst, txen, txreg, bdclk, txd, txbsy);
       rstate  <= s1; // transfer start bit
       rtxreg <= txreg;
       rtxbsy  <= 1;
-      rtxd    <= 1;
+      rtxd    <= 0;
     end
     else
     if ( rstate >= s1 && rstate <= s8 )
