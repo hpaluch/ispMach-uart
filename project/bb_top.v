@@ -14,8 +14,8 @@ module bb_top(osc_clk, tmr_clk,txbd_clk, nled, nrst);
   assign nled[7:1] = 7'b1111111; // turn other LEDs off
 
   // osc_clk should be 5 MHz
-  // tmr_clk should osc_clk / 128 = ~39 kHz
-  defparam I1.TIMER_DIV = "128";
+  // tmr_clk should osc_clk / 1048576 = ~4.768 Hz
+  defparam I1.TIMER_DIV = "1048576";
   OSCTIMER I1 (.DYNOSCDIS(1'b0), .TIMERRES(1'b0), .OSCOUT(osc_clk), .TIMEROUT(tmr_clk));
 
   wire rst;
