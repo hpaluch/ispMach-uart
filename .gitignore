@@ -55,4 +55,15 @@ bb_uart.tt4
 syndos.env
 *.bmp
 
-
+bb_top.bl0
+bb_top.bl1
+bb_top.cif
+bb_top.edi
+bb_top.exf
+bb_top.fse
+bb_top.htm
+bb_top.prj
+bb_top.srf
+bb_top.srm
+bb_top.srr
+bb_top.srs
