@@ -67,3 +67,7 @@ bb_top.srf
 bb_top.srm
 bb_top.srr
 bb_top.srs
+
+bb_top.cmd
+bb_uart.rs1
+bb_uart.rs2

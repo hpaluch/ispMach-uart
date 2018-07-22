@@ -21,7 +21,7 @@ Tools->Fitter Report File Format...
 <BR>
 Project Name         :  bb_uart
 Project Path         :  C:\projects\ispMach-uart\project
-Project Fitted on    :  Sun Jul 22 11:39:30 2018
+Project Fitted on    :  Sun Jul 22 11:58:34 2018
 
 Device               :  M4256_96
 Package              :  144
@@ -38,9 +38,9 @@ Source Format        :  Pure_Verilog_HDL
 <A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
 <BR>
 Prefit Time                     0 secs
-Load Design Time                0.03 secs
-Partition Time                  0.06 secs
-Place Time                      0.00 secs
+Load Design Time                0.05 secs
+Partition Time                  0.03 secs
+Place Time                      0.03 secs
 Route Time                      0.00 secs
 Total Fit Time                  00:00:01
 
@@ -56,7 +56,7 @@ Total Flip-Flops                11
   Total D Flip-Flops            7
   Total T Flip-Flops            4
   Total Latches                 0
-Total Product Terms             58
+Total Product Terms             59
 
 Total Reserved Pins             0
 Total Locked Pins               12
@@ -84,8 +84,8 @@ I/O Pins                           94       11     83    -->    11
 Logic Functions                   256       23    233    -->     8
   Input Registers                  96        0     96    -->     0
 
-GLB Inputs                        576       47    529    -->     8
-Logical Product Terms            1280       47   1233    -->     3
+GLB Inputs                        576       49    527    -->     8
+Logical Product Terms            1280       48   1232    -->     3
 Occupied GLBs                      16        6     10    -->    37
 Macrocells                        256       23    233    -->     8
 
@@ -98,12 +98,12 @@ Control Product Terms:
   Macrocell Resets                256        0    256    -->     0
   Macrocell Presets               256        0    256    -->     0
 
-Global Routing Pool               356       13    343    -->     3
+Global Routing Pool               356       14    342    -->     3
   GRP from IFB                     ..        0     ..    -->    ..
     (from input signals)           ..        0     ..    -->    ..
     (from output signals)          ..        0     ..    -->    ..
     (from bidir signals)           ..        0     ..    -->    ..
-  GRP from MFB                     ..       13     ..    -->    ..
+  GRP from MFB                     ..       14     ..    -->    ..
 ----------------------------------------------------------------------
 
 &lt;Note&gt; 1 : The available PT is the product term that has not been used.
@@ -121,9 +121,9 @@ Maximum
   GLB                      36      *(1)     8   --     --             16       80       16
 </B>-------------------------------------------------------------------------------------------
   GLB    A      0     0     0      0/6      0    0      0             16        0        0
-  GLB    B      1     9    10      0/6      0    2      0             14        6        2
-  GLB    C      1    12    13      3/6      0    6      0             10       11        6
-  GLB    D      0     0     0      0/6      0    0      0             16        0        0
+  GLB    B      0     0     0      0/6      0    0      0             16        0        0
+  GLB    C      2    12    14      3/6      0    6      0             10       16        6
+  GLB    D      1    10    11      0/6      0    2      0             14        6        2
 -------------------------------------------------------------------------------------------
   GLB    E      0     0     0      0/6      0    0      0             16        0        0
   GLB    F      0     0     0      0/6      0    1      0             15        0        1
@@ -131,16 +131,16 @@ Maximum
   GLB    H      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
   GLB    I      0     0     0      6/6      0    6      0             10        6        6
-  GLB    J      1    11    12      2/6      0    5      0             11       12        5
-  GLB    K      0    12    12      0/6      0    3      0             13       12        3
-  GLB    L      0     0     0      0/6      0    0      0             16        0        0
+  GLB    J      0    12    12      2/6      0    5      0             11       11        5
+  GLB    K      0     0     0      0/6      0    0      0             16        0        0
+  GLB    L      0    12    12      0/6      0    3      0             13        9        3
 -------------------------------------------------------------------------------------------
   GLB    M      0     0     0      0/6      0    0      0             16        0        0
   GLB    N      0     0     0      0/6      0    0      0             16        0        0
   GLB    O      0     0     0      0/6      0    0      0             16        0        0
   GLB    P      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
-TOTALS:         3    44    47     11/96     0   23      0            233       47       23
+TOTALS:         3    46    49     11/96     0   23      0            233       48       23
 
 &lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
 &lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
@@ -155,9 +155,9 @@ Maximum
   GLB        1      1        16     16     16     16     16  
 ==============================================================================
 </B>  GLB    A   0      0         0      0      0      0      0
-  GLB    B   1      0         0      0      0      0      0
+  GLB    B   0      0         0      0      0      0      0
   GLB    C   1      0         0      0      0      0      0
-  GLB    D   0      0         0      0      0      0      0
+  GLB    D   1      0         0      0      0      0      0
 ------------------------------------------------------------------------------
   GLB    E   0      0         0      0      0      0      0
   GLB    F   0      0         0      0      0      0      0
@@ -166,8 +166,8 @@ Maximum
 ------------------------------------------------------------------------------
   GLB    I   0      0         0      0      0      0      0
   GLB    J   1      0         0      0      0      0      0
-  GLB    K   1      0         0      0      0      0      0
-  GLB    L   0      0         0      0      0      0      0
+  GLB    K   0      0         0      0      0      0      0
+  GLB    L   1      0         0      0      0      0      0
 ------------------------------------------------------------------------------
   GLB    M   0      0         0      0      0      0      0
   GLB    N   0      0         0      0      0      0      0
@@ -258,12 +258,12 @@ OSCTIMER:                         Pin/Node
 <BR>
 <B>      | Pin   | Bank |GLB |Assigned|                 | Signal|            | PG
 Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enable
-</B>-----------------------------------------------------------------------------------
+</B>------------------------------------------------------------------------------------
 1     | GND   |   -  |    |        |                 |       |            |
 2     | TDI   |   -  |    |        |                 |       |            |
 3     |VCCIO0 |   -  |    |        |                 |       |            |
 4     |  I_O  |   0  |C12 |    *   |LVCMOS33         | Output|<A href=#10>osc_clk</A>|
-5     |  I_O  |   0  |C10 |    *   |LVCMOS33         | Output|<A href=#11>tmr_clk</A>|
+5     |  I_O  |   0  |C10 |    *   |LVCMOS33         | Output|<A href=#12>tmr_clk</A>|
 6     |  I_O  |   0  |C8  |    *   |LVCMOS33         | Output|<A href=#17>txbd_clk</A>|
 7     |  I_O  |   0  |C6  |        |                 |       |            |
 8     |  I_O  |   0  |C4  |        |                 |       |            |
@@ -317,20 +317,20 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 56    |INCLK2 |   1  |    |        |                 |       |            |
 57    | VCC   |   -  |    |        |                 |       |            |
 58    |  I_O  |   1  |I2  |    *   |LVCMOS33         | Output|<A href=#8>nled_7_</A>|
-59    |  I_O  |   1  |I4  |    *   |LVCMOS33         | Output|<A href=#13>nled_6_</A>|
-60    |  I_O  |   1  |I6  |    *   |LVCMOS33         | Output|<A href=#14>nled_5_</A>|
-61    |  I_O  |   1  |I8  |    *   |LVCMOS33         | Output|<A href=#15>nled_4_</A>|
-62    |  I_O  |   1  |I10 |    *   |LVCMOS33         | Output|<A href=#16>nled_3_</A>|
-63    |  I_O  |   1  |I12 |    *   |LVCMOS33         | Output|<A href=#6>nled_2_</A>|
+59    |  I_O  |   1  |I4  |    *   |LVCMOS33         | Output|<A href=#16>nled_6_</A>|
+60    |  I_O  |   1  |I6  |    *   |LVCMOS33         | Output|<A href=#6>nled_5_</A>|
+61    |  I_O  |   1  |I8  |    *   |LVCMOS33         | Output|<A href=#7>nled_4_</A>|
+62    |  I_O  |   1  |I10 |    *   |LVCMOS33         | Output|<A href=#9>nled_3_</A>|
+63    |  I_O  |   1  |I12 |    *   |LVCMOS33         | Output|<A href=#11>nled_2_</A>|
 64    |VCCIO1 |   -  |    |        |                 |       |            |
 65    |GNDIO1 |   -  |    |        |                 |       |            |
 66    |  I_O  |   1  |J2  |        |                 |       |            |
 67    |  I_O  |   1  |J4  |        |                 |       |            |
 68    |  I_O  |   1  |J6  |        |                 |       |            |
 69    |  I_O  |   1  |J8  |        |                 |       |            |
-70    |  I_O  |   1  |J10 |    *   |LVCMOS33         | Output|<A href=#7>nled_1_</A>|
-71    |  I_O  |   1  |J12 |    *   |LVCMOS33         | Output|<A href=#9>nled_0_</A>|
-72    | IN4   |   0  |    |    *   |LVCMOS33         | Input |<A href=#12>nrst</A>|
+70    |  I_O  |   1  |J10 |    *   |LVCMOS33         | Output|<A href=#13>nled_1_</A>|
+71    |  I_O  |   1  |J12 |    *   |LVCMOS33         | Output|<A href=#14>nled_0_</A>|
+72    | IN4   |   0  |    |    *   |LVCMOS33         | Input |<A href=#15>nrst</A>|
 73    | GND   |   -  |    |        |                 |       |            |
 74    | TMS   |   -  |    |        |                 |       |            |
 75    |VCCIO1 |   -  |    |        |                 |       |            |
@@ -403,7 +403,7 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 142   |  I_O  |   0  |B10 |        |                 |       |            |
 143   |  I_O  |   0  |B12 |        |                 |       |            |
 144   | IN9   |   0  |    |        |                 |       |            |
------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 &lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
 &lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
@@ -422,7 +422,7 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
          Pin    Fanout
  Pin GLB Type                       Pullup Signal
 </B>-------------------------------------------------
-  72  --  IN       ----------------     Off <A name=12>nrst</A>
+  72  --  IN       ----------------     Off <A name=15>nrst</A>
 -------------------------------------------------
 
 
@@ -432,17 +432,17 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
           N         L Mc   R E U C O F B Fanout
  Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
 </B>---------------------------------------------------------------------------------
-  71   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#9>nled_0_</A>
-  70   J  0  -   1  1 COM                   ----------------  Fast    Off <A href=#7>nled_1_</A>
-  63   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#6>nled_2_</A>
-  62   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#16>nled_3_</A>
-  61   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#15>nled_4_</A>
-  60   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#14>nled_5_</A>
-  59   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#13>nled_6_</A>
+  71   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#14>nled_0_</A>
+  70   J  0  -   1  1 COM                   ----------------  Fast    Off <A href=#13>nled_1_</A>
+  63   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#11>nled_2_</A>
+  62   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#9>nled_3_</A>
+  61   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#7>nled_4_</A>
+  60   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#6>nled_5_</A>
+  59   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#16>nled_6_</A>
   58   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#8>nled_7_</A>
    4   C  1  -   1  1 COM                   ----------------  Fast    Off <A href=#10>osc_clk</A>
-   5   C  1  -   1  1 COM                   ----------------  Fast    Off <A href=#11>tmr_clk</A>
-   6   C 10  -   3  1 DFF      R            ----------------  Fast    Off <A href=#17>txbd_clk</A>
+   5   C  1  -   1  1 COM                   ----------------  Fast    Off <A href=#12>tmr_clk</A>
+   6   C 13  -   4  1 DFF      R         1  --C-------------  Fast    Off <A href=#17>txbd_clk</A>
 ---------------------------------------------------------------------------------
 
 &lt;Note&gt; CLS = Number of clusters used
@@ -484,22 +484,22 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 <B>        I         C      P R P       Node
         N         L Mc   R E U C I F Fanout
 Mc GLB  P LL PTs  S Type E S P E R P                     Signal
-</B>---------------------------------------------------------------------
+</B>----------------------------------------------------------------------
 15   F  0  -   0  1 COM              1  --C-------------  <A href=#31>_dup_gnd_n_n</A>
- 5   C 12  -   3  1 DFF      R       4  -BC------JK-----  <A href=#19>bd_cnt_0_</A>
- 2   K 12  -   5  1 DFF      R       4  -BC------JK-----  <A href=#20>bd_cnt_1_</A>
- 5   J 12  -   5  1 DFF      R       4  -BC------JK-----  <A href=#21>bd_cnt_2_</A>
- 5   K 12  -   4  1 DFF      R       4  -BC------JK-----  <A href=#22>bd_cnt_3_</A>
-11   J  8  -   2  1 DFF      R       4  -BC------JK-----  <A href=#23>bd_cnt_4_</A>
- 3   B  9  -   3  1 TFF      R       4  -BC------JK-----  <A href=#24>bd_cnt_5_</A>
- 9   B 10  -   3  1 TFF      R       4  -BC------JK-----  <A href=#25>bd_cnt_6_</A>
- 7   J 11  -   3  1 TFF      R       3  --C------JK-----  <A href=#26>bd_cnt_7_</A>
-10   K 12  -   3  1 TFF      R       3  --C------JK-----  <A href=#27>bd_cnt_8_</A>
- 7   C 12  -   3  1 DFF      R       4  -BC------JK-----  <A href=#28>bd_cnt_9_</A>
-15   C  0  -   0  1 COM              4  -BC------JK-----  <A href=#18>gnd_n_n</A>
-15   C  0  -   0  0 COM              4  -BC------JK-----  <A href=#29>osc_clk_c</A>
+ 5   L 12  -   3  1 DFF      R       4  --CD-----J-L----  <A href=#25>cb1_bd_cnt_0_</A>
+ 7   C 12  -   5  1 DFF      R       4  --CD-----J-L----  <A href=#19>cb1_bd_cnt_1_</A>
+ 5   C 12  -   5  1 DFF      R       4  --CD-----J-L----  <A href=#26>cb1_bd_cnt_2_</A>
+ 5   J 12  -   4  1 DFF      R       4  --CD-----J-L----  <A href=#20>cb1_bd_cnt_3_</A>
+11   J  8  -   2  1 DFF      R       4  --CD-----J-L----  <A href=#21>cb1_bd_cnt_4_</A>
+ 2   L  9  -   3  1 TFF      R       4  --CD-----J-L----  <A href=#22>cb1_bd_cnt_5_</A>
+ 3   D 10  -   3  1 TFF      R       4  --CD-----J-L----  <A href=#23>cb1_bd_cnt_6_</A>
+ 9   D 11  -   3  1 TFF      R       4  --CD-----J-L----  <A href=#24>cb1_bd_cnt_7_</A>
+10   L 12  -   3  1 TFF      R       3  --C------J-L----  <A href=#27>cb1_bd_cnt_8_</A>
+ 7   J 12  -   3  1 DFF      R       4  --CD-----J-L----  <A href=#28>cb1_bd_cnt_9_</A>
+15   C  0  -   0  1 COM              4  --CD-----J-L----  <A href=#18>gnd_n_n</A>
+15   C  0  -   0  0 COM              4  --CD-----J-L----  <A href=#29>osc_clk_c</A>
 15   F  0  -   0  0 COM              1  --C-------------  <A href=#30>tmr_clk_c</A>
----------------------------------------------------------------------
+----------------------------------------------------------------------
 
 &lt;Note&gt; CLS = Number of clusters used
        INP = Number of input signals
@@ -520,107 +520,129 @@ Mc GLB  P LL PTs  S Type E S P E R P                     Signal
 
 <A name=31>_dup_gnd_n_n</A> = 0 ; (0 pterm, 0 signal)
 
-<A name=19>bd_cnt_0_.D</A> = <A href=#12>nrst</A> & !<A href=#19>bd_cnt_0_.Q</A> & !<A href=#20>bd_cnt_1_.Q</A> & !<A href=#21>bd_cnt_2_.Q</A> & !<A href=#23>bd_cnt_4_.Q</A>
-       & !<A href=#24>bd_cnt_5_.Q</A> & !<A href=#25>bd_cnt_6_.Q</A> & !<A href=#26>bd_cnt_7_.Q</A> & !<A href=#27>bd_cnt_8_.Q</A>
-    # nrst & !bd_cnt_0_.Q & !<A href=#22>bd_cnt_3_.Q</A> & !bd_cnt_4_.Q & !bd_cnt_5_.Q
-       & !bd_cnt_6_.Q & !bd_cnt_7_.Q & !bd_cnt_8_.Q
-    # nrst & !bd_cnt_0_.Q & !<A href=#28>bd_cnt_9_.Q</A> ; (3 pterms, 11 signals)
-bd_cnt_0_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=25>cb1_bd_cnt_0_.D</A> = <A href=#15>nrst</A> & !<A href=#19>cb1_bd_cnt_1_.Q</A> & !<A href=#21>cb1_bd_cnt_4_.Q</A>
+       & !<A href=#22>cb1_bd_cnt_5_.Q</A> & !<A href=#23>cb1_bd_cnt_6_.Q</A> & !<A href=#24>cb1_bd_cnt_7_.Q</A>
+       & !<A href=#25>cb1_bd_cnt_0_.Q</A> & !<A href=#26>cb1_bd_cnt_2_.Q</A> & !<A href=#27>cb1_bd_cnt_8_.Q</A>
+    # nrst & !<A href=#20>cb1_bd_cnt_3_.Q</A> & !cb1_bd_cnt_4_.Q & !cb1_bd_cnt_5_.Q
+       & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q & !cb1_bd_cnt_0_.Q
+       & !cb1_bd_cnt_8_.Q
+    # nrst & !cb1_bd_cnt_0_.Q & !<A href=#28>cb1_bd_cnt_9_.Q</A> ; (3 pterms, 11 signals)
+cb1_bd_cnt_0_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=20>bd_cnt_1_.D</A> = <A href=#12>nrst</A> & !<A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & !<A href=#22>bd_cnt_3_.Q</A> & !<A href=#23>bd_cnt_4_.Q</A>
-       & !<A href=#24>bd_cnt_5_.Q</A> & !<A href=#25>bd_cnt_6_.Q</A> & !<A href=#26>bd_cnt_7_.Q</A> & !<A href=#27>bd_cnt_8_.Q</A>
-    # nrst & bd_cnt_0_.Q & !bd_cnt_1_.Q & !<A href=#21>bd_cnt_2_.Q</A> & !bd_cnt_4_.Q
-       & !bd_cnt_5_.Q & !bd_cnt_6_.Q & !bd_cnt_7_.Q & !bd_cnt_8_.Q
-    # nrst & bd_cnt_0_.Q & !bd_cnt_1_.Q & !bd_cnt_3_.Q & !bd_cnt_4_.Q
-       & !bd_cnt_5_.Q & !bd_cnt_6_.Q & !bd_cnt_7_.Q & !bd_cnt_8_.Q
-    # nrst & !bd_cnt_0_.Q & bd_cnt_1_.Q & !<A href=#28>bd_cnt_9_.Q</A>
-    # nrst & bd_cnt_0_.Q & !bd_cnt_1_.Q & !bd_cnt_9_.Q ; (5 pterms, 11 signals)
-bd_cnt_1_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=19>cb1_bd_cnt_1_.D</A> = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & !<A href=#20>cb1_bd_cnt_3_.Q</A> & !<A href=#21>cb1_bd_cnt_4_.Q</A>
+       & !<A href=#22>cb1_bd_cnt_5_.Q</A> & !<A href=#23>cb1_bd_cnt_6_.Q</A> & !<A href=#24>cb1_bd_cnt_7_.Q</A>
+       & !<A href=#25>cb1_bd_cnt_0_.Q</A> & !<A href=#27>cb1_bd_cnt_8_.Q</A>
+    # nrst & !cb1_bd_cnt_1_.Q & !cb1_bd_cnt_4_.Q & !cb1_bd_cnt_5_.Q
+       & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q & cb1_bd_cnt_0_.Q
+       & !<A href=#26>cb1_bd_cnt_2_.Q</A> & !cb1_bd_cnt_8_.Q
+    # nrst & !cb1_bd_cnt_1_.Q & !cb1_bd_cnt_3_.Q & !cb1_bd_cnt_4_.Q
+       & !cb1_bd_cnt_5_.Q & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q
+       & cb1_bd_cnt_0_.Q & !cb1_bd_cnt_8_.Q
+    # nrst & cb1_bd_cnt_1_.Q & !cb1_bd_cnt_0_.Q & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # nrst & !cb1_bd_cnt_1_.Q & cb1_bd_cnt_0_.Q & !cb1_bd_cnt_9_.Q ; (5 pterms, 11 signals)
+cb1_bd_cnt_1_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=21>bd_cnt_2_.D.X1</A> = <A href=#12>nrst</A> & !<A href=#19>bd_cnt_0_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A>
-    # nrst & bd_cnt_0_.Q & !<A href=#20>bd_cnt_1_.Q</A> & bd_cnt_2_.Q & !bd_cnt_9_.Q
-    # nrst & bd_cnt_0_.Q & bd_cnt_1_.Q & !bd_cnt_2_.Q & !bd_cnt_9_.Q
-    # nrst & bd_cnt_2_.Q & !<A href=#22>bd_cnt_3_.Q</A> & !<A href=#23>bd_cnt_4_.Q</A> & !<A href=#24>bd_cnt_5_.Q</A>
-       & !<A href=#25>bd_cnt_6_.Q</A> & !<A href=#26>bd_cnt_7_.Q</A> & !<A href=#27>bd_cnt_8_.Q</A> & bd_cnt_9_.Q ; (4 pterms, 11 signals)
-bd_cnt_2_.D.X2 = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & !<A href=#22>bd_cnt_3_.Q</A>
-       & !<A href=#23>bd_cnt_4_.Q</A> & !<A href=#24>bd_cnt_5_.Q</A> & !<A href=#25>bd_cnt_6_.Q</A> & !<A href=#26>bd_cnt_7_.Q</A>
-       & !<A href=#27>bd_cnt_8_.Q</A> & <A href=#28>bd_cnt_9_.Q</A> ; (1 pterm, 10 signals)
-bd_cnt_2_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=26>cb1_bd_cnt_2_.D.X1</A> = <A href=#15>nrst</A> & !<A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#26>cb1_bd_cnt_2_.Q</A>
+       & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # nrst & cb1_bd_cnt_1_.Q & !<A href=#25>cb1_bd_cnt_0_.Q</A> & cb1_bd_cnt_2_.Q
+       & !cb1_bd_cnt_9_.Q
+    # nrst & cb1_bd_cnt_1_.Q & cb1_bd_cnt_0_.Q & !cb1_bd_cnt_2_.Q
+       & !cb1_bd_cnt_9_.Q
+    # nrst & !<A href=#20>cb1_bd_cnt_3_.Q</A> & !<A href=#21>cb1_bd_cnt_4_.Q</A> & !<A href=#22>cb1_bd_cnt_5_.Q</A>
+       & !<A href=#23>cb1_bd_cnt_6_.Q</A> & !<A href=#24>cb1_bd_cnt_7_.Q</A> & cb1_bd_cnt_2_.Q
+       & !<A href=#27>cb1_bd_cnt_8_.Q</A> & cb1_bd_cnt_9_.Q ; (4 pterms, 11 signals)
+cb1_bd_cnt_2_.D.X2 = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & !<A href=#20>cb1_bd_cnt_3_.Q</A>
+       & !<A href=#21>cb1_bd_cnt_4_.Q</A> & !<A href=#22>cb1_bd_cnt_5_.Q</A> & !<A href=#23>cb1_bd_cnt_6_.Q</A>
+       & !<A href=#24>cb1_bd_cnt_7_.Q</A> & <A href=#25>cb1_bd_cnt_0_.Q</A> & !<A href=#27>cb1_bd_cnt_8_.Q</A>
+       & <A href=#28>cb1_bd_cnt_9_.Q</A> ; (1 pterm, 10 signals)
+cb1_bd_cnt_2_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=22>bd_cnt_3_.D.X1</A> = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A>
-    # nrst & !bd_cnt_1_.Q & !bd_cnt_2_.Q & <A href=#22>bd_cnt_3_.Q</A> & !<A href=#23>bd_cnt_4_.Q</A>
-       & !<A href=#24>bd_cnt_5_.Q</A> & !<A href=#25>bd_cnt_6_.Q</A> & !<A href=#26>bd_cnt_7_.Q</A> & !<A href=#27>bd_cnt_8_.Q</A>
-       & bd_cnt_9_.Q
-    # nrst & bd_cnt_0_.Q & bd_cnt_1_.Q & bd_cnt_2_.Q & !bd_cnt_3_.Q
-       & !bd_cnt_4_.Q & !bd_cnt_5_.Q & !bd_cnt_6_.Q & !bd_cnt_7_.Q
-       & !bd_cnt_8_.Q & bd_cnt_9_.Q ; (3 pterms, 11 signals)
-bd_cnt_3_.D.X2 = <A href=#12>nrst</A> & <A href=#22>bd_cnt_3_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A> ; (1 pterm, 3 signals)
-bd_cnt_3_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=20>cb1_bd_cnt_3_.D.X1</A> = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#25>cb1_bd_cnt_0_.Q</A>
+       & <A href=#26>cb1_bd_cnt_2_.Q</A> & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # nrst & cb1_bd_cnt_1_.Q & !<A href=#20>cb1_bd_cnt_3_.Q</A> & !<A href=#21>cb1_bd_cnt_4_.Q</A>
+       & !<A href=#22>cb1_bd_cnt_5_.Q</A> & !<A href=#23>cb1_bd_cnt_6_.Q</A> & !<A href=#24>cb1_bd_cnt_7_.Q</A>
+       & cb1_bd_cnt_0_.Q & cb1_bd_cnt_2_.Q & !<A href=#27>cb1_bd_cnt_8_.Q</A>
+    # nrst & !cb1_bd_cnt_1_.Q & cb1_bd_cnt_3_.Q & !cb1_bd_cnt_4_.Q
+       & !cb1_bd_cnt_5_.Q & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q
+       & !cb1_bd_cnt_2_.Q & !cb1_bd_cnt_8_.Q & cb1_bd_cnt_9_.Q ; (3 pterms, 11 signals)
+cb1_bd_cnt_3_.D.X2 = <A href=#15>nrst</A> & <A href=#20>cb1_bd_cnt_3_.Q</A> & !<A href=#28>cb1_bd_cnt_9_.Q</A> ; (1 pterm, 3 signals)
+cb1_bd_cnt_3_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=23>bd_cnt_4_.D.X1</A> = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & <A href=#22>bd_cnt_3_.Q</A>
-       & !<A href=#28>bd_cnt_9_.Q</A> ; (1 pterm, 6 signals)
-bd_cnt_4_.D.X2 = <A href=#12>nrst</A> & <A href=#23>bd_cnt_4_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A> ; (1 pterm, 3 signals)
-bd_cnt_4_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=21>cb1_bd_cnt_4_.D.X1</A> = <A href=#15>nrst</A> & <A href=#21>cb1_bd_cnt_4_.Q</A> & !<A href=#28>cb1_bd_cnt_9_.Q</A> ; (1 pterm, 3 signals)
+cb1_bd_cnt_4_.D.X2 = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#20>cb1_bd_cnt_3_.Q</A>
+       & <A href=#25>cb1_bd_cnt_0_.Q</A> & <A href=#26>cb1_bd_cnt_2_.Q</A> & !<A href=#28>cb1_bd_cnt_9_.Q</A> ; (1 pterm, 6 signals)
+cb1_bd_cnt_4_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=24>bd_cnt_5_.T</A> = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & <A href=#22>bd_cnt_3_.Q</A>
-       & <A href=#23>bd_cnt_4_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A>
-    # !nrst & <A href=#24>bd_cnt_5_.Q</A>
-    # bd_cnt_5_.Q & bd_cnt_9_.Q ; (3 pterms, 8 signals)
-bd_cnt_5_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=22>cb1_bd_cnt_5_.T</A> = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#20>cb1_bd_cnt_3_.Q</A> & <A href=#21>cb1_bd_cnt_4_.Q</A>
+       & <A href=#25>cb1_bd_cnt_0_.Q</A> & <A href=#26>cb1_bd_cnt_2_.Q</A> & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # !nrst & <A href=#22>cb1_bd_cnt_5_.Q</A>
+    # cb1_bd_cnt_5_.Q & cb1_bd_cnt_9_.Q ; (3 pterms, 8 signals)
+cb1_bd_cnt_5_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=25>bd_cnt_6_.T</A> = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & <A href=#22>bd_cnt_3_.Q</A>
-       & <A href=#23>bd_cnt_4_.Q</A> & <A href=#24>bd_cnt_5_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A>
-    # !nrst & <A href=#25>bd_cnt_6_.Q</A>
-    # bd_cnt_6_.Q & bd_cnt_9_.Q ; (3 pterms, 9 signals)
-bd_cnt_6_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=23>cb1_bd_cnt_6_.T</A> = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#20>cb1_bd_cnt_3_.Q</A> & <A href=#21>cb1_bd_cnt_4_.Q</A>
+       & <A href=#22>cb1_bd_cnt_5_.Q</A> & <A href=#25>cb1_bd_cnt_0_.Q</A> & <A href=#26>cb1_bd_cnt_2_.Q</A>
+       & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # !nrst & <A href=#23>cb1_bd_cnt_6_.Q</A>
+    # cb1_bd_cnt_6_.Q & cb1_bd_cnt_9_.Q ; (3 pterms, 9 signals)
+cb1_bd_cnt_6_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=26>bd_cnt_7_.T</A> = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & <A href=#22>bd_cnt_3_.Q</A>
-       & <A href=#23>bd_cnt_4_.Q</A> & <A href=#24>bd_cnt_5_.Q</A> & <A href=#25>bd_cnt_6_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A>
-    # !nrst & <A href=#26>bd_cnt_7_.Q</A>
-    # bd_cnt_7_.Q & bd_cnt_9_.Q ; (3 pterms, 10 signals)
-bd_cnt_7_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=24>cb1_bd_cnt_7_.T</A> = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#20>cb1_bd_cnt_3_.Q</A> & <A href=#21>cb1_bd_cnt_4_.Q</A>
+       & <A href=#22>cb1_bd_cnt_5_.Q</A> & <A href=#23>cb1_bd_cnt_6_.Q</A> & <A href=#25>cb1_bd_cnt_0_.Q</A> & <A href=#26>cb1_bd_cnt_2_.Q</A>
+       & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # !nrst & <A href=#24>cb1_bd_cnt_7_.Q</A>
+    # cb1_bd_cnt_7_.Q & cb1_bd_cnt_9_.Q ; (3 pterms, 10 signals)
+cb1_bd_cnt_7_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=27>bd_cnt_8_.T</A> = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & <A href=#22>bd_cnt_3_.Q</A>
-       & <A href=#23>bd_cnt_4_.Q</A> & <A href=#24>bd_cnt_5_.Q</A> & <A href=#25>bd_cnt_6_.Q</A> & <A href=#26>bd_cnt_7_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A>
-    # !nrst & <A href=#27>bd_cnt_8_.Q</A>
-    # bd_cnt_8_.Q & bd_cnt_9_.Q ; (3 pterms, 11 signals)
-bd_cnt_8_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=27>cb1_bd_cnt_8_.T</A> = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#20>cb1_bd_cnt_3_.Q</A> & <A href=#21>cb1_bd_cnt_4_.Q</A>
+       & <A href=#22>cb1_bd_cnt_5_.Q</A> & <A href=#23>cb1_bd_cnt_6_.Q</A> & <A href=#24>cb1_bd_cnt_7_.Q</A> & <A href=#25>cb1_bd_cnt_0_.Q</A>
+       & <A href=#26>cb1_bd_cnt_2_.Q</A> & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # !nrst & <A href=#27>cb1_bd_cnt_8_.Q</A>
+    # cb1_bd_cnt_8_.Q & cb1_bd_cnt_9_.Q ; (3 pterms, 11 signals)
+cb1_bd_cnt_8_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=28>bd_cnt_9_.D</A> = <A href=#12>nrst</A> & <A href=#19>bd_cnt_0_.Q</A> & <A href=#20>bd_cnt_1_.Q</A> & <A href=#21>bd_cnt_2_.Q</A> & <A href=#22>bd_cnt_3_.Q</A>
-       & <A href=#23>bd_cnt_4_.Q</A> & <A href=#24>bd_cnt_5_.Q</A> & <A href=#25>bd_cnt_6_.Q</A> & <A href=#26>bd_cnt_7_.Q</A> & <A href=#27>bd_cnt_8_.Q</A>
-       & !<A href=#28>bd_cnt_9_.Q</A>
-    # nrst & !bd_cnt_1_.Q & !bd_cnt_2_.Q & !bd_cnt_4_.Q & !bd_cnt_5_.Q
-       & !bd_cnt_6_.Q & !bd_cnt_7_.Q & !bd_cnt_8_.Q & bd_cnt_9_.Q
-    # nrst & !bd_cnt_3_.Q & !bd_cnt_4_.Q & !bd_cnt_5_.Q & !bd_cnt_6_.Q
-       & !bd_cnt_7_.Q & !bd_cnt_8_.Q & bd_cnt_9_.Q ; (3 pterms, 11 signals)
-bd_cnt_9_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
+<A name=28>cb1_bd_cnt_9_.D</A> = <A href=#15>nrst</A> & <A href=#19>cb1_bd_cnt_1_.Q</A> & <A href=#20>cb1_bd_cnt_3_.Q</A> & <A href=#21>cb1_bd_cnt_4_.Q</A>
+       & <A href=#22>cb1_bd_cnt_5_.Q</A> & <A href=#23>cb1_bd_cnt_6_.Q</A> & <A href=#24>cb1_bd_cnt_7_.Q</A> & <A href=#25>cb1_bd_cnt_0_.Q</A>
+       & <A href=#26>cb1_bd_cnt_2_.Q</A> & <A href=#27>cb1_bd_cnt_8_.Q</A> & !<A href=#28>cb1_bd_cnt_9_.Q</A>
+    # nrst & !cb1_bd_cnt_1_.Q & !cb1_bd_cnt_4_.Q & !cb1_bd_cnt_5_.Q
+       & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q & !cb1_bd_cnt_2_.Q
+       & !cb1_bd_cnt_8_.Q & cb1_bd_cnt_9_.Q
+    # nrst & !cb1_bd_cnt_3_.Q & !cb1_bd_cnt_4_.Q & !cb1_bd_cnt_5_.Q
+       & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q & !cb1_bd_cnt_8_.Q
+       & cb1_bd_cnt_9_.Q ; (3 pterms, 11 signals)
+cb1_bd_cnt_9_.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
 <A name=18>gnd_n_n</A> = 0 ; (0 pterm, 0 signal)
 
-<A name=9>nled_0_</A> = <A href=#12>nrst</A> ; (1 pterm, 1 signal)
+<A name=14>nled_0_</A> = <A href=#15>nrst</A> ; (1 pterm, 1 signal)
 
-<A name=7>nled_1_</A> = 1 ; (1 pterm, 0 signal)
+<A name=13>nled_1_</A> = 1 ; (1 pterm, 0 signal)
 
-<A name=6>nled_2_</A> = 1 ; (1 pterm, 0 signal)
+<A name=11>nled_2_</A> = 1 ; (1 pterm, 0 signal)
 
-<A name=16>nled_3_</A> = 1 ; (1 pterm, 0 signal)
+<A name=9>nled_3_</A> = 1 ; (1 pterm, 0 signal)
 
-<A name=15>nled_4_</A> = 1 ; (1 pterm, 0 signal)
+<A name=7>nled_4_</A> = 1 ; (1 pterm, 0 signal)
 
-<A name=14>nled_5_</A> = 1 ; (1 pterm, 0 signal)
+<A name=6>nled_5_</A> = 1 ; (1 pterm, 0 signal)
 
-<A name=13>nled_6_</A> = 1 ; (1 pterm, 0 signal)
+<A name=16>nled_6_</A> = 1 ; (1 pterm, 0 signal)
 
 <A name=8>nled_7_</A> = 1 ; (1 pterm, 0 signal)
 
 <A name=10>osc_clk</A> = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=11>tmr_clk</A> = <A href=#30>tmr_clk_c</A> ; (1 pterm, 1 signal)
+<A name=12>tmr_clk</A> = <A href=#30>tmr_clk_c</A> ; (1 pterm, 1 signal)
 
-<A name=17>txbd_clk.D</A> = !( !<A href=#21>bd_cnt_2_.Q</A> & !<A href=#22>bd_cnt_3_.Q</A> & !<A href=#23>bd_cnt_4_.Q</A> & !<A href=#24>bd_cnt_5_.Q</A>
-       & !<A href=#25>bd_cnt_6_.Q</A> & !<A href=#26>bd_cnt_7_.Q</A> & !<A href=#28>bd_cnt_9_.Q</A>
-    # !<A href=#12>nrst</A>
-    # !<A href=#27>bd_cnt_8_.Q</A> & !bd_cnt_9_.Q ) ; (3 pterms, 9 signals)
+<A name=17>txbd_clk.D</A> = <A href=#15>nrst</A> & !<A href=#19>cb1_bd_cnt_1_.Q</A> & !<A href=#20>cb1_bd_cnt_3_.Q</A> & !<A href=#21>cb1_bd_cnt_4_.Q</A>
+       & !<A href=#22>cb1_bd_cnt_5_.Q</A> & !<A href=#23>cb1_bd_cnt_6_.Q</A> & !<A href=#24>cb1_bd_cnt_7_.Q</A>
+       & <A href=#25>cb1_bd_cnt_0_.Q</A> & <A href=#26>cb1_bd_cnt_2_.Q</A> & <A href=#27>cb1_bd_cnt_8_.Q</A>
+    # nrst & <A href=#17>txbd_clk.Q</A> & !cb1_bd_cnt_1_.Q & !cb1_bd_cnt_4_.Q
+       & !cb1_bd_cnt_5_.Q & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q
+       & !cb1_bd_cnt_2_.Q & !cb1_bd_cnt_8_.Q
+    # nrst & txbd_clk.Q & !cb1_bd_cnt_3_.Q & !cb1_bd_cnt_4_.Q
+       & !cb1_bd_cnt_5_.Q & !cb1_bd_cnt_6_.Q & !cb1_bd_cnt_7_.Q
+       & !cb1_bd_cnt_8_.Q
+    # nrst & txbd_clk.Q & !<A href=#28>cb1_bd_cnt_9_.Q</A> ; (4 pterms, 12 signals)
 txbd_clk.C = <A href=#29>osc_clk_c</A> ; (1 pterm, 1 signal)
 
 <BR>

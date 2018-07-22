@@ -21,25 +21,44 @@ module bb_top(osc_clk, tmr_clk,txbd_clk, nled, nrst);
   wire rst;
   assign rst = ~nrst;
 
-  reg [9:0]bd_cnt;
-  reg bd_cnt_out;
+  //assign txbd_clk = bd_cnt_out;
 
-  // generate 9600 Hz (Baud) for UART transmit
-  always @(posedge osc_clk)
-    if (rst)
+  bb_uart_clockbase cb1( .rst(rst), .clk(osc_clk), .bdout(txbd_clk) );
+
+endmodule
+
+// generated 9600 Hz (Baud) clock - as accurately as possible - from 5 MHz
+module bb_uart_clockbase(rst,clk,bdout);
+	input rst;
+	input clk;
+	output bdout;
+
+	// warning - must adjust also reg size, etc...
+	parameter CLK_DIVIDER = 522;
+	parameter HALF_DIVIDER = CLK_DIVIDER/2;
+
+	reg [9:0]bd_cnt;
+	reg bd_cnt_out;
+
+	assign bdout = bd_cnt_out;
+
+always @(posedge clk)
+    if ( rst )
     begin
-       bd_cnt <= 10'b0000000000; // async reset
+       bd_cnt     <= 10'b0000000000; // async reset
        bd_cnt_out <= 0;
     end
     else
     begin
-       bd_cnt_out <= ( bd_cnt >= (520/2) );
-       if ( bd_cnt < 522 )
+       if ( bd_cnt == HALF_DIVIDER )
+	   bd_cnt_out <= 1; // try to make output clock symetrical...
+       if ( bd_cnt < CLK_DIVIDER )
           bd_cnt <= bd_cnt + 1; // sync couting
        else
+       begin
           bd_cnt <= 10'b0000000000;
+	  bd_cnt_out <= 0;
+       end
     end
-
-  assign txbd_clk = bd_cnt_out;
 
 endmodule
