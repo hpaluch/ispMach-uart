@@ -19,8 +19,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:\projects\ispMach-uart\project\bb_uart.jed</File>
-			<FileTime>07/22/18 09:26:54</FileTime>
-			<JedecChecksum>0x1BA3</JedecChecksum>
+			<FileTime>07/22/18 11:20:14</FileTime>
+			<JedecChecksum>0x9DFF</JedecChecksum>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

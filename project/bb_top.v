@@ -37,7 +37,7 @@ module bb_top(osc_clk, tmr_clk,txbd_clk, nled, nrst);
        if ( bd_cnt < 522 )
           bd_cnt <= bd_cnt + 1; // sync couting
        else
-          bd_cnt <= 10'b0000000000; // async reset
+          bd_cnt <= 10'b0000000000;
     end
 
   assign txbd_clk = bd_cnt_out;
