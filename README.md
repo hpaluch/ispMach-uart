@@ -16,7 +16,7 @@ It is necessary to test clock accuracy before playing with UART.
 Please check your Breakout Board according to following table:
 
 ispMach PIN|Verilog HDL name|Expected frequency|Measured frequency|Error
-===========|================|==================|==================|===== 
+-----------|----------------|------------------|------------------|----- 
 4|osc_clk|5 MHz|5.001 MHz|0.02%
 5|osc_tmr|5 MHz/128=39.0625KHz|39.08 kHz|0.05%
 
